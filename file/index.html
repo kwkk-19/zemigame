@@ -1,1 +1,59 @@
+#cart
+  %h2 Your Shopping Cart
+  %ul.cart-items
+  .total
+    .subtotalTotal
+      Subtotal
+      %span $0.00
+    .taxes
+      Tax
+      %span $0.00
+    .shipping
+      Shipping
+      %span $0.00
+    .finalTotal
+      Total
+      %span $0.00
+    %a.checkout
+      Check Out
+    %p.error 
+        
+.wrap#wrap
+  %header
+    %a.logo{:href=>"#"}
+      Octocat <span class="brandico-github"></span> Outfitters
+    %a.cart-link{:href=>"#menu"}
+      %span.cart-text.fontawesome-shopping-cart
+        %span Cart
+      %span.returnToShop &larr; Back        
+      %span.cart-quantity.empty 0
 
+        
+  %section.shop
+  
+  %footer
+    %p Crafted for the Pattern Rodeo (rodeo-007). Images belong to Github.
+
+    
+// Product Templates for Shop & Cart
+
+%script#productTemplate{ type: 'text/template' }
+  <div class="product">
+  <h1></h1>
+  <p></p>
+  <div class="button">
+  <div class="price"></div>
+  <a class="addtocart">
+  <div class="add">Add to Cart</div>
+  <div class="added">Added!</div>
+  </a>
+  </div>
+  </div>
+  
+%script#cartItem{ type: 'text/template' }
+  <li><div class="cart-product">
+  <input class="quantity" value="1">
+  </div><div class="cart-description">
+  <h3></h3>
+  <span class="subtotal"></span>
+  </div></li>
