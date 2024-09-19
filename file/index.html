@@ -6,46 +6,53 @@
 <meta charset=utf-8 />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
-#cart
-  %h2 Your Shopping Cart
-  %ul.cart-items
-  .total
-    .subtotalTotal
+  <body>
+<div id='cart'>
+  <h2>Your Shopping Cart</h2>
+  <ul class='cart-items'></ul>
+  <div class='total'>
+    <div class='subtotalTotal'>
       Subtotal
-      %span $0.00
-    .taxes
+      <span>$0.00</span>
+    </div>
+    <div class='taxes'>
       Tax
-      %span $0.00
-    .shipping
+      <span>$0.00</span>
+    </div>
+    <div class='shipping'>
       Shipping
-      %span $0.00
-    .finalTotal
+      <span>$0.00</span>
+    </div>
+    <div class='finalTotal'>
       Total
-      %span $0.00
-    %a.checkout
+      <span>$0.00</span>
+    </div>
+    <a class='checkout'>
       Check Out
-    %p.error 
-        
-.wrap#wrap
-  %header
-    %a.logo{:href=>"#"}
+    </a>
+    <p class='error'></p>
+  </div>
+</div>
+<div class='wrap' id='wrap'>
+  <header>
+    <a class='logo' href='#'>
       Octocat <span class="brandico-github"></span> Outfitters
-    %a.cart-link{:href=>"#menu"}
-      %span.cart-text.fontawesome-shopping-cart
-        %span Cart
-      %span.returnToShop &larr; Back        
-      %span.cart-quantity.empty 0
-
-        
-  %section.shop
-  
-  %footer
-    %p Crafted for the Pattern Rodeo (rodeo-007). Images belong to Github.
-
-    
-// Product Templates for Shop & Cart
-
-%script#productTemplate{ type: 'text/template' }
+    </a>
+    <a class='cart-link' href='#menu'>
+      <span class='cart-text fontawesome-shopping-cart'>
+        <span>Cart</span>
+      </span>
+      <span class='returnToShop'>&larr; Back</span>
+      <span class='cart-quantity empty'>0</span>
+    </a>
+  </header>
+  <section class='shop'></section>
+  <footer>
+    <p>Crafted for the Pattern Rodeo (rodeo-007). Images belong to Github.</p>
+  </footer>
+</div>
+<!-- / Product Templates for Shop & Cart -->
+<script id='productTemplate' type='text/template'>
   <div class="product">
   <h1></h1>
   <p></p>
@@ -57,11 +64,14 @@
   </a>
   </div>
   </div>
-  
-%script#cartItem{ type: 'text/template' }
+</script>
+<script id='cartItem' type='text/template'>
   <li><div class="cart-product">
   <input class="quantity" value="1">
   </div><div class="cart-description">
   <h3></h3>
   <span class="subtotal"></span>
   </div></li>
+</script>
+  </body>
+</html>
