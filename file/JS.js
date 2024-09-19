@@ -1,15 +1,18 @@
 $(document).ready(function() {
 
   // Product data to be used in shop and in cart
-  var products = {
-    'Octocat Mug' : ['Octocat Mug', "The mug you've been dreaming about. One sip from this ceramic 16oz fluid delivery system and you'll never go back to red cups.", 14, 'https://cdn.shopify.com/s/files/1/0051/4802/products/white-mug-1_1024x1024.jpg', 1],
-    'Leather Coasters' : ['Leather Coasters', "These coasters roll all of the greatest qualities into one: class, leather, and octocats. They also happen to protect surfaces from cold drinks.", 18, 'https://cdn.shopify.com/s/files/1/0051/4802/products/MG_1934_1024x1024.jpg', 2],  
-    'Octopint (Set of 2)' : ['Octopint (Set of 2)', "Set of two heavyweight 16 oz. Octopint glasses for your favorite malty beverage.", 16, 'https://cdn.shopify.com/s/files/1/0051/4802/products/pint_1024x1024.jpg', 3],
-    'Blacktocat 2.0 Tee' : ['Blacktocat 2.0 Tee', "Check it. Blacktocat is back with a whole new direction. He's exited stealth mode and is ready for primetime, now with a stylish logo.", 25, 'https://cdn.shopify.com/s/files/1/0051/4802/products/blacktocat-3_1024x1024.jpg', 4],
-    'Die Cut Stickers' : ['Die Cut Stickers', "Need a huge Octocat sticker for your laptop, fridge, snowboard, or ceiling fan? Look no further!", 2, 'https://cdn.shopify.com/s/files/1/0051/4802/products/sticker-large_1024x1024.jpg', 5],
-    'Pixelcat Shirt' : ['Pixelcat Shirt', "Pixels are your friends. Show your bits in this super-comfy blue American Apparel tri-blend shirt with a pixelated version of your favorite aquatic feline", 25, 'https://cdn.shopify.com/s/files/1/0051/4802/products/8bit-1_1024x1024.jpg?145', 6]
-  };  
+var products = {
+  'Hair 1' : ['Hair 1', "Short and stylish wig for everyday use.", 30, 'path/to/hair1.jpg', 7],
+  'Yugo Wig' : ['Yugo Wig', "Elegant and formal wig.", 45, 'path/to/yugo.jpg', 8],
+  'Tomo Wig' : ['Tomo Wig', "Casual wig with a natural look.", 35, 'path/to/tomo.jpg', 9],
+  'Yotuda Wig' : ['Yotuda Wig', "Classic wig for all seasons.", 50, 'path/to/yotuda.jpg', 10],
+  'Hair' : ['Hair', "Versatile wig for various occasions.", 40, 'path/to/hair.jpg', 11],
   
+  // 既存の商品
+  'Octocat Mug' : ['Octocat Mug', "The mug you've been dreaming about...", 14, 'https://cdn.shopify.com/s/files/1/0051/4802/products/white-mug-1_1024x1024.jpg', 1],
+  'Leather Coasters' : ['Leather Coasters', "These coasters roll all...", 18, 'https://cdn.shopify.com/s/files/1/0051/4802/products/MG_1934_1024x1024.jpg', 2],
+  // さらに他の商品
+};
   // Populates shop with items based on template and data in var products
   
   var $shop = $('.shop');
