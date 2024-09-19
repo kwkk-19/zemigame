@@ -1,77 +1,265 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-<script src="JS.js"></script>
-<link rel="stylesheet" href="style.css">
-<meta charset=utf-8 />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
-  <body>
-<div id='cart'>
-  <h2>Your Shopping Cart</h2>
-  <ul class='cart-items'></ul>
-  <div class='total'>
-    <div class='subtotalTotal'>
-      Subtotal
-      <span>$0.00</span>
-    </div>
-    <div class='taxes'>
-      Tax
-      <span>$0.00</span>
-    </div>
-    <div class='shipping'>
-      Shipping
-      <span>$0.00</span>
-    </div>
-    <div class='finalTotal'>
-      Total
-      <span>$0.00</span>
-    </div>
-    <a class='checkout'>
-      Check Out
-    </a>
-    <p class='error'></p>
-  </div>
-</div>
-<div class='wrap' id='wrap'>
-  <header>
-    <a class='logo' href='#'>
-      Octocat <span class="brandico-github"></span> Outfitters
-    </a>
-    <a class='cart-link' href='#menu'>
-      <span class='cart-text fontawesome-shopping-cart'>
-        <span>Cart</span>
-      </span>
-      <span class='returnToShop'>&larr; Back</span>
-      <span class='cart-quantity empty'>0</span>
-    </a>
-  </header>
-  <section class='shop'></section>
-  <footer>
-    <p>Crafted for the Pattern Rodeo (rodeo-007). Images belong to Github.</p>
-  </footer>
-</div>
-<!-- / Product Templates for Shop & Cart -->
-<script id='productTemplate' type='text/template'>
-  <div class="product">
-  <h1></h1>
-  <p></p>
-  <div class="button">
-  <div class="price"></div>
-  <a class="addtocart">
-  <div class="add">Add to Cart</div>
-  <div class="added">Added!</div>
-  </a>
-  </div>
-  </div>
-</script>
-<script id='cartItem' type='text/template'>
-  <li><div class="cart-product">
-  <input class="quantity" value="1">
-  </div><div class="cart-description">
-  <h3></h3>
-  <span class="subtotal"></span>
-  </div></li>
-</script>
-  </body>
-</html>
+<div class="cart-wrapper">
+			<div class="cart-panel">
+				<header class="cart-header">
+					<div class="cart-tabs">
+						<ul class="cart-tab-table">
+							<li class="cart-tab-cell selected">
+								<span class="cart-tab">
+									<span class="tab-ic tab-cart-ic"></span>
+									<span class="tab-label">$1 200 364.89</span>
+								</span>
+							</li>
+							<li class="cart-tab-cell">
+								<span class="cart-tab">
+									<span class="tab-ic tab-heart-line-ic"></span>
+									<span class="tab-label">162</span>
+								</span>
+							</li>
+						</ul>
+						<span class="tab-selector"></span>
+					</div>
+				</header>
+				<div class="cart-content">
+					<div class="cart-sections">
+						<section class="cart-section nano">
+							<ul class="cart-list overthrow nano-content">
+								<li class="cart-list-item">
+									<div class="cart-item-img" style="background-image: url('http://www.momastore.org/wcsstore/MOMASTORE1/images/products/113438_A2_Metropolitan_Clock.jpg');"></div>
+									<div class="cart-item">
+										<div class="cart-item-description">
+											<span>
+												<p class="cart-item-label">Metropolitan Clock</p>
+												<p class="cart-item-price">$200.00</p>
+											</span>
+										</div>
+										<div class="cart-item-favorites">
+											<span class="item-heart-ic"></span>
+										</div>
+										<div class="cart-item-trash">
+											<span class="item-trash-ic"></span>
+										</div>
+									</div>
+								</li>
+								<li class="cart-list-item">
+									<div class="cart-item-img" style="background-image: url('http://www.momastore.org/wcsstore/MOMASTORE1/images/products/114079_A2_Mondaine_Smart_Watch.jpg');"></div>
+									<div class="cart-item">
+										<div class="cart-item-description">
+											<span>
+												<p class="cart-item-label">Mondaine Helvetica No 1 Smart Watch</p>
+												<p class="cart-item-price">$950.00</p>
+											</span>
+										</div>
+										<div class="cart-item-favorites">
+											<span class="item-heart-ic"></span>
+										</div>
+										<div class="cart-item-trash">
+											<span class="item-trash-ic"></span>
+										</div>
+									</div>
+								</li>
+								<li class="cart-list-item">
+									<div class="cart-item-img" style="background-image: url('http://www.momastore.org/wcsstore/MOMASTORE1/images/products/107156_C2_Kobenstyle_Casserole_6_Quart.jpg');"></div>
+									<div class="cart-item">
+										<div class="cart-item-description">
+											<span>
+												<p class="cart-item-label">Kobenstyle Casserole - Green</p>
+												<p class="cart-item-price">$80.00</p>
+											</span>
+										</div>
+										<div class="cart-item-favorites">
+											<span class="item-heart-ic"></span>
+										</div>
+										<div class="cart-item-trash">
+											<span class="item-trash-ic"></span>
+										</div>
+									</div>
+								</li>
+								<li class="cart-list-footer"></li>
+							</ul>
+						</section>
+						<section class="cart-section nano">
+							<ul class="cart-list overthrow nano-content">
+								<li class="cart-list-item">
+									<div class="cart-item-img" style="background-image: url('http://www.momastore.org/wcsstore/MOMASTORE1/images/products/113344_A2_Grand_Prix_Play_Set.jpg');"></div>
+									<div class="cart-item">
+										<div class="cart-item-description">
+											<span>
+												<p class="cart-item-label">Grand Prix Play Set</p>
+												<p class="cart-item-price">$90.00</p>
+											</span>
+										</div>
+										<div class="cart-item-favorites">
+											<span class="item-heart-ic"></span>
+										</div>
+										<div class="cart-item-trash">
+											<span class="item-trash-ic"></span>
+										</div>
+									</div>
+								</li>
+								<li class="cart-list-item">
+									<div class="cart-item-img" style="background-image: url('http://www.momastore.org/wcsstore/MOMASTORE1/images/products/113473_A2_Robot_Nightlight.jpg');"></div>
+									<div class="cart-item">
+										<div class="cart-item-description">
+											<span>
+												<p class="cart-item-label">Robot Nightlight</p>
+												<p class="cart-item-price">$44.00</p>
+											</span>
+										</div>
+										<div class="cart-item-favorites">
+											<span class="item-heart-ic"></span>
+										</div>
+										<div class="cart-item-trash">
+											<span class="item-trash-ic"></span>
+										</div>
+									</div>
+								</li>
+								<li class="cart-list-item">
+									<div class="cart-item-img" style="background-image: url('http://www.momastore.org/wcsstore/MOMASTORE1/images/products/99390_A2_Bird_Mobile.jpg');"></div>
+									<div class="cart-item">
+										<div class="cart-item-description">
+											<span>
+												<p class="cart-item-label">Birds In Harmony Mobile</p>
+												<p class="cart-item-price">$35.00</p>
+											</span>
+										</div>
+										<div class="cart-item-favorites">
+											<span class="item-heart-ic"></span>
+										</div>
+										<div class="cart-item-trash">
+											<span class="item-trash-ic"></span>
+										</div>
+									</div>
+								</li>
+								<li class="cart-list-item">
+									<div class="cart-item-img" style="background-image: url('http://www.momastore.org/wcsstore/MOMASTORE1/images/products/113760_A2_HAY_Plisse_File_Organizer_A4_Coral_Fade.jpg');"></div>
+									<div class="cart-item">
+										<div class="cart-item-description">
+											<span>
+												<p class="cart-item-label">HAY Plissé File Organizer</p>
+												<p class="cart-item-price">$28.00</p>
+											</span>
+										</div>
+										<div class="cart-item-favorites">
+											<span class="item-heart-ic"></span>
+										</div>
+										<div class="cart-item-trash">
+											<span class="item-trash-ic"></span>
+										</div>
+									</div>
+								</li>
+								<li class="cart-list-item">
+									<div class="cart-item-img" style="background-image: url('http://www.momastore.org/wcsstore/MOMASTORE1/images/products/113335_A2_Osmo_Game_Starter_Kit.jpg');"></div>
+									<div class="cart-item">
+										<div class="cart-item-description">
+											<span>
+												<p class="cart-item-label">Osmo Game Starter Kit</p>
+												<p class="cart-item-price">$80.00</p>
+											</span>
+										</div>
+										<div class="cart-item-favorites">
+											<span class="item-heart-ic"></span>
+										</div>
+										<div class="cart-item-trash">
+											<span class="item-trash-ic"></span>
+										</div>
+									</div>
+								</li>
+								<li class="cart-list-item">
+									<div class="cart-item-img" style="background-image: url('http://www.momastore.org/wcsstore/MOMASTORE1/images/products/107996_A2_Kits_DIY_Gamer_Set_with_Arduino.jpg');"></div>
+									<div class="cart-item">
+										<div class="cart-item-description">
+											<span>
+												<p class="cart-item-label">DIY Gamer Kit (With Arduino)</p>
+												<p class="cart-item-price">$99.00</p>
+											</span>
+										</div>
+										<div class="cart-item-favorites">
+											<span class="item-heart-ic"></span>
+										</div>
+										<div class="cart-item-trash">
+											<span class="item-trash-ic"></span>
+										</div>
+									</div>
+								</li>
+								<li class="cart-list-item">
+									<div class="cart-item-img" style="background-image: url('http://www.momastore.org/wcsstore/MOMASTORE1/images/products/113758_A2_HAY_Playing_Cards.jpg');"></div>
+									<div class="cart-item">
+										<div class="cart-item-description">
+											<span>
+												<p class="cart-item-label">HAY Playing Cards</p>
+												<p class="cart-item-price">$10.00</p>
+											</span>
+										</div>
+										<div class="cart-item-favorites">
+											<span class="item-heart-ic"></span>
+										</div>
+										<div class="cart-item-trash">
+											<span class="item-trash-ic"></span>
+										</div>
+									</div>
+								</li>
+								<li class="cart-list-item">
+									<div class="cart-item-img" style="background-image: url('http://www.momastore.org/wcsstore/MOMASTORE1/images/products/110390_A2_Pixel_Worktop_Saver.jpg');"></div>
+									<div class="cart-item">
+										<div class="cart-item-description">
+											<span>
+												<p class="cart-item-label">Pixel Worktop Saver</p>
+												<p class="cart-item-price">$25.00</p>
+											</span>
+										</div>
+										<div class="cart-item-favorites">
+											<span class="item-heart-ic"></span>
+										</div>
+										<div class="cart-item-trash">
+											<span class="item-trash-ic"></span>
+										</div>
+									</div>
+								</li>
+								<li class="cart-list-item">
+									<div class="cart-item-img" style="background-image: url('http://www.momastore.org/wcsstore/MOMASTORE1/images/products/110387_A2_On_Color_Mug.jpg');"></div>
+									<div class="cart-item">
+										<div class="cart-item-description">
+											<span>
+												<p class="cart-item-label">On Color Mug</p>
+												<p class="cart-item-price">$12.00</p>
+											</span>
+										</div>
+										<div class="cart-item-favorites">
+											<span class="item-heart-ic"></span>
+										</div>
+										<div class="cart-item-trash">
+											<span class="item-trash-ic"></span>
+										</div>
+									</div>
+								</li>
+								<li class="cart-list-item">
+									<div class="cart-item-img" style="background-image: url('http://www.momastore.org/wcsstore/MOMASTORE1/images/products/112540_A2_DM_Tealight_Girachille_Spinner.jpg');"></div>
+									<div class="cart-item">
+										<div class="cart-item-description">
+											<span>
+												<p class="cart-item-label">Girachille</p>
+												<p class="cart-item-price">$28.00</p>
+											</span>
+										</div>
+										<div class="cart-item-favorites">
+											<span class="item-heart-ic"></span>
+										</div>
+										<div class="cart-item-trash">
+											<span class="item-trash-ic"></span>
+										</div>
+									</div>
+								</li>
+								<li class="cart-list-footer"></li>
+							</ul>
+						</section>
+					</div>
+				</div>
+				<footer class="cart-footer">
+					<div class="cart-checkout-btn">
+						<span class="checkout-cart-ic"></span>
+						<span class="checkout-label">Checkout</span>
+					</div>
+					<span class="cart-copyright">Powered by <a href="">Store</a></span>
+				</footer>
+			</div>
+		</div>
